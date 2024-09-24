@@ -11,20 +11,22 @@
     <header>
         <label for="btn-nav" class="btn-nav"><i class='bx bx-menu'></i></label>
         <input type="checkbox" id="btn-nav">
-        <nav>
-            <ul class="navi">
-                <li><a href="">Inicio</a></li>
-                <li><a href="">Productos</a></li>
-                <li><a href="">Contacto</a></li>
-                <li><a href="">Instagram</a></li>
-                <li><a href="">Quienes Somos</a></li>
-                <li><a href="">Crear Cuenta</a></li>
-                <li><a href="">Iniciar Sesion</a></li>
-            </ul>
-        </nav>
+        <div class="nav-container">
+            <nav>
+                <ul class="navi">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="/assets/html/mujer.html">Productos</a></li>
+                    <li><a href="/assets/html/contacto.html">Contacto</a></li>
+                    <li><a href="https://www.instagram.com/coolfashionistachic?igsh=OXE1aHN2bXE2dDhy">Instagram</a></li>
+                    <li><a href="/assets/html/quienes-somos.html">Quienes Somos</a></li>
+                    <li><a href="">Crear Cuenta</a></li>
+                    <li><a href="">Iniciar Sesion</a></li>
+                </ul>
+            </nav>
+        </div>    
         <div class="nav-bar">
             <div class="search">
-                <input type="text">
+                <input type="text" placeholder="Buscar">
                 <button><i class='bx bx-search-alt-2' ></i></button>
             </div>
             <div class="logo">
@@ -35,31 +37,52 @@
                 <span>0</span>
             </div>
         </div>
+        <div class="btn-whatsapp">
+            <a href=""><i class='bx bxl-whatsapp'></i></a>
+        </div>
     </header>
     <main>
         <section>
-            <div class="slider">
-                <a href="" class="fade"><img src="/assets/img/slider1.jpg" alt=""></a>
-                <a href="" class="fade"><img src="/assets/img/slider2.jpg" alt=""></a>
-                <a href="" class="fade"><img src="/assets/img/slider3.jpg" alt=""></a>
-            </div>
-        </section>
-        <section>
-            <div class="models">
-                <div class="model1">
-                    <a href=""><img src="/assets/img/faja.jpg" alt=""></a>
+            <div class="slideshow-container">
+                <div class="mySlides fade">
+                    <div class="numertext">1 / 3</div>
+                    <img src="/assets/img/slider1.jpg" alt="">
+                    <div class="text"></div>
                 </div>
-                <div class="model2">
-                    <a href=""><img src="/assets/img/slouchy.jpg" alt=""></a>
+                <div class="mySlides fade">
+                    <div class="numertext">2 / 3</div>
+                    <img src="/assets/img/slider2.jpg" alt="">
+                    <div class="text"></div>
                 </div>
-                <div class="model3">
-                    <a href=""><img src="/assets/img/bajo.jpg" alt=""></a>
-                    <a href=""><img src="/assets/img/alto.jpg" alt=""></a>
+                <div class="mySlides fade">
+                    <div class="numertext">3 / 3</div>
+                    <img src="/assets/img/slider3.jpg" alt="">
+                    <div class="text"></div>
                 </div>
             </div>
         </section>
         <section>
             <div class="container">
+                <div class="column-1">
+                    <a href=""><img src="/assets/img/faja.jpg" alt="" class="zoom-img"></a>
+                </div>
+                <div class="column-2">
+                    <div class="top-row">
+                        <a href=""><img src="/assets/img/slouchy.jpg" alt="" class="zoom-img"></a>
+                    </div>
+                    <div class="bottom-row">
+                        <div class="bottom-column">
+                            <a href=""><img src="/assets/img/bajo.jpg" alt="" class="zoom-img"></a>
+                        </div>
+                        <div class="bottom-column">
+                            <a href=""><img src="/assets/img/alto.jpg" alt="" class="zoom-img"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="container-element">
                 <div class="element">
                     <i class='bx bx-badge-check'></i>
                     <h2>20% OFF EN TODA LA WEB</h2>
@@ -83,7 +106,9 @@
                 <h3>Quieres recibir nuestras ofertas? Registrate ya 
                     mismo y comenza a disfrutarlas!
                 </h3>
-                <input type="text" class="mail">
+                <input type="text" class="mail" placeholder="Email">
+            </div>
+            <div class="btn">
                 <button class="send">ENVIAR</button>
             </div>
         </section>
