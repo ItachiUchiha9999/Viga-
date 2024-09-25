@@ -67,7 +67,7 @@ nav{
     left: 0;
     top: 0;
     width: 200px;
-    top: 50px;
+    top: 70px;
     height: calc(100vh - 50px);
     background: var(--main-background-opacity-40);
     transform: translateX(-100%);
@@ -117,6 +117,7 @@ nav{
     transition: .5s ease;
     background: rgba(0, 0, 0, .1);
     z-index: 1011;
+    margin: 20px 0 0 10px;
 }
 
 .btn-nav:hover{
@@ -127,23 +128,43 @@ nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 2vh 5vh 0 0;
-    padding: 10px
+    margin: 2vh 0 0 10vh;
+    padding: 5px  
 }
 
-.nav-bar .search{
+.nav-bar .search {
     display: flex;
     align-items: center;
+    border-radius: 4px; 
+    overflow: hidden; 
 }
 
-.nav-bar .search input{
-    padding: 5px;
-    margin-right: 5px;
+.nav-bar .search input {
+    padding: 10px;
+    flex-grow: 1;
+    font-size: 16px;
+    border-radius: 30px;
+    width: 40vh;
+}
+
+.nav-bar .search button {
+    background-color: var(--main-foreground);
+    color: white; 
+    border-radius: 30px;
+    padding: 10px; 
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    
+}
+
+.nav-bar .search button:hover {
+    background-color: var(--warning);
 }
 
 .nav-bar .logo{
     flex-grow: 1;
     text-align: center;
+    margin-right: 50vh;
 }
 
 .nav-bar .logo img{
@@ -158,11 +179,12 @@ nav{
 .nav-bar .shop a{
     position: relative;
     font-size: 25px;
+    right: 50px;
 }
 
 .nav-bar .shop span{
     position: absolute;
-    top: 35px;
+    top: 30px;
     right: 45px;
     background: var(--warning);
     color: var(--main-background);
