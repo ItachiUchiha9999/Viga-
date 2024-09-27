@@ -14,22 +14,20 @@ function showSlide(){
     setTimeout(showSlide,5000);
 }
 
-function searchProducts() {
-    let searchQuery = document.getElementById('Search-Bar').value.toLowerCase();
-    let products = Array.from(document.getElementsByClassName('element-card'));
-
-    products.forEach(function(product) {
-        let nameProduct = product.dataset.name.toLowerCase();
-        let priceProduct = product.dataset.price.toLowerCase();
-        let displayStyle = 'none';
-
-        if (nameProduct.includes(searchQuery) || priceProduct.includes(searchQuery)) {
-            displayStyle = '';
-        }
-
-        product.style.display = displayStyle;
-    });
+const ProductsSearch = () =>{
+    const searchBox = document.getElementById('search-item').value.toUpperCase();
+    const productsStore = document.getElementById('product-list');
+    const products = document.querySelectorAll(".product");
+    const pName = productsStore.querySelectorAll("el1");
+    for (var i = 0; i < pName.length; i++) {
+        let match = products[i].querySelectorAll('el1')[0];
+        if (match) {
+            let textValue = match.textContent || match.innerHTML
+            if (textValue.toUpperCase().indexOf(searchBox) > -1) {
+                products[i].style.display = "";
+            } else {
+                products[i].style.display = "none";
+            }
+        }        
+    }
 }
-
-document.getElementById('Search-Bar').addEventListener('input', searchProducts);
-document.getElementById('btn-search').addEventListener('click', searchProducts);
